@@ -7,6 +7,10 @@ class TestHobbitsPriorityStatus:
     # допиши тест, который добавит в программу нового хоббита с именем Голлум,
     # начислит ему 50 миль и проверит его статус в системе
     def test_add_miles_and_check_status(self):
+        hobbit = "Голлум"
+        miles = 50
         # использовали объект класса HobbitsPriorityStatus, чтобы вызвать его методы
         hobbits_priority = HobbitsPriorityStatus()
-        ...
+        hobbits_priority.add_new_hobbit(hobbit)
+        hobbits_priority.add_miles_to_hobbit(hobbit, miles)
+        assert hobbits_priority.get_status(hobbit) == 'Classic'
